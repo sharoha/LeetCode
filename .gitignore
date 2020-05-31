@@ -1,0 +1,5 @@
+.idea
+*.properties
+*.iml
+src/library
+*.template
