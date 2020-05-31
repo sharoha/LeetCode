@@ -3,3 +3,7 @@
 *.iml
 src/library
 *.template
+**/*.json
+src/codes/practice/
+output
+out
