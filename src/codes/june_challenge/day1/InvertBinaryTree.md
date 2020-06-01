@@ -1,6 +1,6 @@
 Approach
 ---
-Idea: Starting any node `n` swap its `left` and `right` child. Recur for left and right child again.
+Idea: For any node `n` swap its `left` and `right` child. Recur for left and right child again.
 
 TODO
 * Add gif animation for this problem
