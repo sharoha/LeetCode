@@ -1,10 +1,11 @@
 .idea
 *.properties
 *.iml
-src/library
+src/library/structure5
 *.template
 **/*.json
 src/codes/practice/
 output
 out
 .vscode/
+*.txt
