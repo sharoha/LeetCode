@@ -1,27 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
-    static bool sortByDiff(pair<pair<int, int>, int> &a, pair<pair<int, int>, int> &b) {
-        return a.second < b.second;
-    }
-    
-    int twoCitySchedCost(vector<vector<int>>& costs) {
+    int twoCitySchedCost(vector<vector<int>> &costs) {
         int n = costs.size();
-        vector<pair<pair<int, int>, int>> vect;
-        for (int i = 0; i < n; i++) {
-            int diff = costs[i][0] - costs[i][1];
-            vect.push_back({{costs[i][0], costs[i][1]}, diff});
-        }
-        sort(vect.begin(), vect.end(), sortByDiff);
+        sort(costs.begin(), costs.end(), [&](vector<int> &a, vector<int> &b) -> bool {
+            return a[1] - a[0] > b[1] - b[0];
+        });
         int cost = 0;
         for (int i = 0; i < n; i++) {
-            // cout << vect[i].first.first << " " << vect[i].first.second << " " << vect[i].second << "\n";
-            if (i < n / 2) cost += vect[i].first.first;
-            else {
-                cost += vect[i].first.second;
-            }
+            if (i < n / 2)
+                cost += costs[i][0];
+            else
+                cost += costs[i][1];
         }
         return cost;
     }
