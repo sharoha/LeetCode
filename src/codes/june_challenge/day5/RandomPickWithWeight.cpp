@@ -14,21 +14,8 @@ public:
     
     int pickIndex() {
         int ind = rand() % sum;
-        return binarySearch(ind + 1);
-    }
-    
-    int binarySearch(int val) {
-        int low = 0;
-        int high = w_sum.size() - 1;
-        while (low <= high) {
-            int mid = (low + high) / 2;
-            if (w_sum[mid] < val){
-                low = mid + 1;
-            } else {
-                high = mid - 1;
-            }
-        }
-        return low;
+        auto  itr =  upper_bound(w_sum.begin(), w_sum.end(), ind);
+        return distance(w_sum.begin(), itr);
     }
 };
 
