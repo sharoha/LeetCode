@@ -6,18 +6,10 @@ import codes.fastio_java.OutputWriter;
 import java.util.*;
 
 public class QueueReconstruction {
-    private static Integer apply(int[] e) {
-        return e[0];
-    }
-
-    private static Integer apply2(int[] e) {
-        return e[1];
-    }
-
     public void solve(int testNumber, InputReader in, OutputWriter out) {
     }
     public int[][] reconstructQueue(int[][] people) {
-        Arrays.sort(people, Comparator.comparing(QueueReconstruction::apply).reversed().thenComparing(QueueReconstruction::apply2));
+        Arrays.sort(people, Comparator.comparing((int[] e) -> e[0]).reversed().thenComparing((int[] e) -> e[1]));
         List<int[]> answer = new ArrayList<>();
         for (int[] person : people) {
             answer.add(person[1], person);
