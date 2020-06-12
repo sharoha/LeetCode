@@ -9,3 +9,4 @@ output
 out
 .vscode/
 *.txt
+lib/
