@@ -7,6 +7,8 @@ public class IntegerUtil {
     public static int[] dx = {1, 1, 0, -1, -1, -1, 0, 1};
     public static int[] dy = {0, 1, 1, 1, 0, -1, -1, -1};
 
+    public static int[] dx4 = {0, 0, 1, -1};
+    public static int[] dy4 = {1, -1, 0, 0};
     /*
      * @param b : We need to calculate the number of prime factors
      * @param prime is the array for storing prime: Use 1e6 for the size of the prime array

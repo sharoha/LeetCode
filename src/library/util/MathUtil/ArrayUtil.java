@@ -1,9 +1,6 @@
 package library.util.MathUtil;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 
@@ -201,12 +198,20 @@ public class ArrayUtil {
         return IntStream.of(a).min().orElse(-Cons.inf);
     }
 
+    public static int min(Integer[] a) {
+        return Arrays.stream(a).min(Comparator.naturalOrder()).orElse(-Cons.inf);
+    }
+
     public static long min(long[] a) {
         return LongStream.of(a).min().orElse(-Cons.INF);
     }
 
     public static int max(int[] a) {
         return IntStream.of(a).max().orElse(Cons.inf);
+    }
+
+    public static int max(Integer[] a) {
+        return Arrays.stream(a).max(Comparator.naturalOrder()).orElse(-Cons.inf);
     }
 
     public static long max(long[] a) {

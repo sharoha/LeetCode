@@ -40,6 +40,24 @@ public class ModUtil {
         return res;
     }
 
+    public long mul(long a, long b) {
+        a = mod(a);
+        b = mod(b);
+        return mod(a * b);
+    }
+
+    public long add(long a, long b) {
+        a = mod(a);
+        b = mod(b);
+        return mod(a + b);
+    }
+
+    public long sub(long a, long b) {
+        a = mod(a);
+        b = mod(b);
+        return mod(a - b);
+    }
+
     /*
    calculates (x^s) % mod
     */

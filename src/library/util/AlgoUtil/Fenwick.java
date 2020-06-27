@@ -39,6 +39,7 @@ public class Fenwick {
         }
     }
     // Compute the prefix sum value[1, i]
+    // i is 0 index based
     public long sum(int i) {
         long sum = 0;
         for (++i; i > 0; i -= (i & -i)) {
@@ -75,5 +76,11 @@ public class Fenwick {
             }
         }
         return sum;
+    }
+
+    public static void main(String[] args) {
+        int[] a = {1, 2, 3, 4, 5};
+        Fenwick f = new Fenwick(a);
+        System.out.println(f.sum(2));
     }
 }

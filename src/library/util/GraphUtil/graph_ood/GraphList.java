@@ -25,7 +25,10 @@ public abstract class GraphList<V, E> implements IGraph<V, E> {
     public abstract void addEdge(V source, V destination);
 
     @Override
-    public int getDegree(V source) {
+    public int getDegree(V source) throws IllegalAccessException {
+        if (directed) {
+            throw new IllegalAccessException("Directed graph can not call getDegree, use inDegree, outDegree instead");
+        }
         return vertexEdgeMap.get(source).degree();
     }
 
