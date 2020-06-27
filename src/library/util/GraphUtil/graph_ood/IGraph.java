@@ -10,7 +10,7 @@ public interface IGraph<V, E> {
 
     void addEdge(V source, V destination, E edge);
 
-    int getDegree(V source);
+    int getDegree(V source) throws IllegalAccessException;
 
     Set<Edge<V, E>> getEdges(V source);
 

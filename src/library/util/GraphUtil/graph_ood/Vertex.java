@@ -6,6 +6,8 @@ public class Vertex<E> {
     protected E label;
     protected Color color;
     protected boolean visited;
+    protected int inDegree;
+    protected int outDegree;
 
     public Vertex(E label) {
         this.label = label;
@@ -38,6 +40,23 @@ public class Vertex<E> {
     public Color getColor() {
         return this.color;
     }
+
+    public int getInDegree() {
+        return inDegree;
+    }
+
+    public void setInDegree(int inDegree) {
+        this.inDegree = inDegree;
+    }
+
+    public int getOutDegree() {
+        return outDegree;
+    }
+
+    public void setOutDegree(int outDegree) {
+        this.outDegree = outDegree;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
